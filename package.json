@@ -1,0 +1,25 @@
+{
+  "name": "habitica-notion-integration",
+  "version": "1.0.0",
+  "description": "Script to integrate Habitica and Notion syncing tasks and dailies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lczapparolli/habitica-notion-integration.git"
+  },
+  "keywords": [
+    "Habitica",
+    "Notion",
+    "Google script",
+    "automation"
+  ],
+  "author": "Luis Carlos Zapparolli Neto <lczapparolli@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lczapparolli/habitica-notion-integration/issues"
+  },
+  "homepage": "https://github.com/lczapparolli/habitica-notion-integration#readme"
+}
