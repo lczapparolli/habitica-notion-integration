@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/lczapparolli/habitica-notion-integration/issues"
   },
-  "homepage": "https://github.com/lczapparolli/habitica-notion-integration#readme"
+  "homepage": "https://github.com/lczapparolli/habitica-notion-integration#readme",
+  "devDependencies": {
+    "@google/clasp": "^2.4.1"
+  }
 }
