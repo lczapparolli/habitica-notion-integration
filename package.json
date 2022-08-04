@@ -2,7 +2,7 @@
   "name": "habitica-notion-integration",
   "version": "1.0.0",
   "description": "Script to integrate Habitica and Notion syncing tasks and dailies",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,3 +1,5 @@
+import "google-apps-script";
+
 const NOTION_DATA = {
   BASE_URL: "https://api.notion.com/v1/databases/",
   API_VERSION: "2022-02-22"
