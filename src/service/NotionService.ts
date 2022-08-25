@@ -1,3 +1,5 @@
+import { NotionQueryResult } from "../type/NotionTasks";
+
 export namespace NotionService {
   const NOTION_DATA = {
     BASE_URL: "https://api.notion.com/v1/databases",
@@ -18,7 +20,7 @@ export namespace NotionService {
    * 
    * @returns Return the database content
    */
-  export function loadTasks(): any {
+  export function loadTasks(): NotionQueryResult {
     let payload = {
       "filter": {
           "and": [
