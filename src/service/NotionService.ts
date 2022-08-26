@@ -1,3 +1,4 @@
+import { NotionQueryParams } from "../type/NotionQueryParams";
 import { NotionQueryResult } from "../type/NotionTasks";
 import { HttpRequestParam, HttpService } from "./gasWrapper/HttpService";
 import { PropertyService } from "./gasWrapper/PropertyService";
@@ -23,7 +24,7 @@ export namespace NotionService {
      * @returns Return the database content
      */
     export function loadTasks(start_cursor?: string): NotionQueryResult {
-        let payload = {
+        let payload: NotionQueryParams = {
             filter: {
                 and: [
                     {
