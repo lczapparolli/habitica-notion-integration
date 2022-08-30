@@ -1,5 +1,5 @@
 import { NotionQueryParams } from "../type/NotionQueryParams";
-import { NotionQueryResult } from "../type/NotionTasks";
+import { NotionQueryResult } from "../type/NotionQueryResult";
 import { HttpRequestParam, HttpService } from "./gasWrapper/HttpService";
 import { PropertyService } from "./gasWrapper/PropertyService";
 
