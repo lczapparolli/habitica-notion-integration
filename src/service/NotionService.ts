@@ -1,61 +1,58 @@
 import { NotionQueryParams } from "../type/NotionQueryParams";
 import { NotionQueryResult } from "../type/NotionQueryResult";
-import { HttpRequestParam, HttpService } from "./gasWrapper/HttpService";
-import { PropertyService } from "./gasWrapper/PropertyService";
+import { HttpRequestParam, post } from "./gasWrapper/HttpService";
+import { getProperty } from "./gasWrapper/PropertyService";
 
-export namespace NotionService {
-    const NOTION_DATA = {
-        BASE_URL: "https://api.notion.com/v1/databases",
-        API_VERSION: "2022-02-22"
+const NOTION_DATA = {
+    BASE_URL: "https://api.notion.com/v1/databases",
+    API_VERSION: "2022-02-22"
+};
+
+/**
+ * Generates the URL for notion database query
+ * 
+ * @returns The URL for database access
+ */
+function getUrl(): string {
+    return `${NOTION_DATA.BASE_URL}/${getProperty("NOTION_DATABASE_ID")}/query`;
+}
+
+/**
+ * Queries Notion database for pending tasks
+ * 
+ * @returns Return the database content
+ */
+export function loadTasks(start_cursor?: string): NotionQueryResult {
+    let payload: NotionQueryParams = {
+        filter: {
+            and: [
+                {
+                    property: "Status",
+                    select: { does_not_equal: "Feito 🙌" }
+                },
+                {
+                    property: "Tipo",
+                    select: { equals: "Tarefa" }
+                },
+                {
+                    property: "Para a semana",
+                    checkbox: { equals: true }
+                }
+            ]
+        },
+        start_cursor: start_cursor
     };
 
-    /**
-     * Generates the URL for notion database query
-     * 
-     * @returns The URL for database access
-     */
-    function getUrl(): string {
-        return `${NOTION_DATA.BASE_URL}/${PropertyService.getProperty("NOTION_DATABASE_ID")}/query`;
-    }
+    let params: HttpRequestParam = {
+        contentType: "application/json",
+        headers: {
+            "Authorization": "Bearer " + getProperty("NOTION_API_TOKEN"),
+            "Notion-Version": NOTION_DATA.API_VERSION
+        }
+    };
 
-    /**
-     * Queries Notion database for pending tasks
-     * 
-     * @returns Return the database content
-     */
-    export function loadTasks(start_cursor?: string): NotionQueryResult {
-        let payload: NotionQueryParams = {
-            filter: {
-                and: [
-                    {
-                        property: "Status",
-                        select: { does_not_equal: "Feito 🙌" }
-                    },
-                    {
-                        property: "Tipo",
-                        select: { equals: "Tarefa" }
-                    },
-                    {
-                        property: "Para a semana",
-                        checkbox: { equals: true }
-                    }
-                ]
-            },
-            start_cursor: start_cursor
-        };
-
-        let params: HttpRequestParam = {
-            contentType: "application/json",
-            headers: {
-                "Authorization": "Bearer " + PropertyService.getProperty("NOTION_API_TOKEN"),
-                "Notion-Version": NOTION_DATA.API_VERSION
-            }
-        };
-
-        let response = HttpService.post(getUrl(), JSON.stringify(payload), params);
-        return JSON.parse(response.body);
-    }
-
+    let response = post(getUrl(), JSON.stringify(payload), params);
+    return JSON.parse(response.body);
 }
 
 /*
