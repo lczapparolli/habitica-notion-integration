@@ -7,7 +7,7 @@ export interface NotionQueryResult {
     page: any;
 }
 
-interface NotionTask {
+export interface NotionTask {
     id: string;
     created_time: Date;
     last_edited_time: Date;
