@@ -75,8 +75,8 @@ interface NotionSelectProperty extends NotionProperty {
 
 interface NotionDateProperty extends NotionProperty {
     date: {
-        start: Date;
-        end: Date | null;
+        start: string;
+        end: string | null;
         time_zone: string | null;
     }
 }

@@ -1,0 +1,137 @@
+{
+    "object": "page",
+    "id": "5c2056eb-4a52-44c8-aeb1-58eeb2a15802",
+    "created_time": "2022-09-12T13:31:00.000Z",
+    "last_edited_time": "2022-09-18T22:46:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "8604d39d-3884-480a-8f0b-65e73f336b9c"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "8604d39d-3884-480a-8f0b-65e73f336b9c"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+        "type": "database_id",
+        "database_id": "ba91f10e-9260-4a96-86f4-360acbc370f2"
+    },
+    "archived": false,
+    "properties": {
+        "Date Created": {
+            "id": "'Y6%3C",
+            "type": "created_time",
+            "created_time": "2022-09-12T13:31:00.000Z"
+        },
+        "Dia da semana": {
+            "id": "%3AIKE",
+            "type": "formula",
+            "formula": {
+                "type": "string",
+                "string": "Saturday"
+            }
+        },
+        "Projeto": {
+            "id": "%3A_eQ",
+            "type": "rich_text",
+            "rich_text": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "Clean home",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "Clean home",
+                    "href": null
+                }
+            ]
+        },
+        "Categoria": {
+            "id": "%3DPj%3D",
+            "type": "select",
+            "select": {
+                "id": "b1b8baaa-1b2f-4ae2-8ada-de9d510fc0f1",
+                "name": "Home",
+                "color": "purple"
+            }
+        },
+        "Tipo": {
+            "id": "EkF_",
+            "type": "select",
+            "select": {
+                "id": "6ab72838-71fe-4243-b16b-3e8bb876d9a0",
+                "name": "Tarefa",
+                "color": "red"
+            }
+        },
+        "Intervalo": {
+            "id": "OGrY",
+            "type": "rich_text",
+            "rich_text": []
+        },
+        "Data": {
+            "id": "SewP",
+            "type": "date",
+            "date": {
+                "start": "2022-10-01",
+                "end": null,
+                "time_zone": null
+            }
+        },
+        "Status": {
+            "id": "%5EOE%40",
+            "type": "select",
+            "select": {
+                "id": "1",
+                "name": "A fazer",
+                "color": "red"
+            }
+        },
+        "Para a semana": {
+            "id": "%60Nu%5D",
+            "type": "formula",
+            "formula": {
+                "type": "boolean",
+                "boolean": true
+            }
+        },
+        "Recorrente": {
+            "id": "js%5Ck",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "Fix rack",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "Fix rack",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/Fix-rack-5c2056eb4a5244c8aeb158eeb2a15802"
+}
