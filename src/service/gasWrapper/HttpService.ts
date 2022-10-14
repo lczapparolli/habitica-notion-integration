@@ -21,6 +21,20 @@ export function post(url: string, body: any, parameters: HttpRequestParam): Http
     };
 }
 
+export function get(url: string, parameters: HttpRequestParam): HttpResponse {
+    let params: GoogleAppsScript.URL_Fetch.URLFetchRequestOptions = {
+        method: "get",
+        headers: parameters.headers
+    };
+
+    let response = UrlFetchApp.fetch(url, params);
+    return {
+        responseCode: response.getResponseCode(),
+        body: response.getContentText()
+    }
+
+}
+
 export interface HttpRequestParam {
     headers: { [header: string]: string };
     contentType: "application/json";

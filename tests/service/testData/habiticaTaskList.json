@@ -1,0 +1,57 @@
+{
+    "success": true,
+    "data": [
+        {
+            "challenge": {},
+            "group": {
+                "completedBy": {},
+                "assignedUsers": []
+            },
+            "completed": false,
+            "collapseChecklist": false,
+            "type": "todo",
+            "notes": "",
+            "tags": [],
+            "value": 0,
+            "priority": 1,
+            "attribute": "str",
+            "byHabitica": false,
+            "checklist": [],
+            "reminders": [],
+            "createdAt": "2022-09-29T16:23:57.487Z",
+            "updatedAt": "2022-09-29T16:23:57.487Z",
+            "_id": "6d17371e-0e96-4ce8-a15d-29d091d62121",
+            "text": "Test 2",
+            "userId": "d36c7f74-2e9c-4b63-a49f-42a00cc5fd1f",
+            "id": "6d17371e-0e96-4ce8-a15d-29d091d62121"
+        },
+        {
+            "challenge": {},
+            "group": {
+                "completedBy": {},
+                "assignedUsers": []
+            },
+            "completed": false,
+            "collapseChecklist": false,
+            "type": "todo",
+            "notes": "",
+            "tags": [],
+            "value": 0,
+            "priority": 1,
+            "attribute": "str",
+            "byHabitica": false,
+            "checklist": [],
+            "reminders": [],
+            "createdAt": "2022-09-29T16:21:31.378Z",
+            "updatedAt": "2022-09-29T16:23:16.394Z",
+            "_id": "390fa757-9ab7-4dfb-8d2a-46847d35dd1c",
+            "text": "Test 1",
+            "userId": "d36c7f74-2e9c-4b63-a49f-42a00cc5fd1f",
+            "date": "2022-09-30T16:23:00.000Z",
+            "id": "390fa757-9ab7-4dfb-8d2a-46847d35dd1c"
+        }
+    ],
+    "notifications": [
+    ],
+    "appVersion": "4.245.0"
+}
