@@ -15,8 +15,11 @@ describe("HabiticaService", () => {
     describe("loadTasks", () => {
         test("method should return a list of tasks", () => {
             mockedGet.mockReturnValueOnce({ responseCode: 200, body: fs.readFileSync(`${__dirname}/testData/habiticaTaskList.json`)});
+            
             var result = loadTasks();
-            expect(result).toHaveLength(2)
+            
+            expect(result).toHaveLength(2);
+            expect(get).toHaveBeenCalledTimes(1);
         });
     });
 });

@@ -1,11 +1,11 @@
-interface HabiticaQueryResult {
+export interface HabiticaQueryResult {
     success: boolean;
     data: Array<HabiticaTask>;
     notifications: Array<any>;
     appVersion: string;
 }
 
-interface HabiticaTask {
+export interface HabiticaTask {
     challenge: any;
     group: any;
     completed: boolean;
